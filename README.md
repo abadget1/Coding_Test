@@ -19,10 +19,6 @@
 3. Start the application by using the following command(s):
 
     mvn spring-boot:run
-    
-    or
-    
-    java -jar target/UserAPI-0.0.1-SNAPSHOT.jar
 
 4. The application should now be running on http://localhost:8080 
 
