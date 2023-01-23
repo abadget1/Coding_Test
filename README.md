@@ -10,9 +10,9 @@
 
 1. Download the backend zip file or clone this repository to your local directory:
 
-    https://github.com/abadget1/MagMutual-CodingTest.git
+    https://github.com/abadget1/Coding_Test.git
 
-2. Navigate to the directory in the terminal and build the application using the following command:
+2. Navigate to the "/Backend" directory in the terminal and build the application using the following command:
 
     mvn clean install
 
@@ -31,9 +31,9 @@
 
 1. Download the backend zip file or clone this repository to your local directory:
 
-    https://github.com/abadget1/Frontend.git
+    https://github.com/abadget1/Coding_Test.git
 
-2. Navigate to the extracted directory in the terminal and install the required packages using the following command:
+2. Navigate to the "/Frontend" directory in the terminal and install the required packages using the following command:
 
     yarn install
     
