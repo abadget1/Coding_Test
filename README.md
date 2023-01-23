@@ -1,4 +1,4 @@
-# MagMutual Coding Test
+# Coding Test
 
 #### Prerequisites
 - Java 11 or higher must be installed on your machine.
