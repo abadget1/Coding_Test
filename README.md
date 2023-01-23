@@ -19,9 +19,7 @@
 - Start the application by using the following command(s):
 
     mvn spring-boot:run
-
     or
-
     java -jar target/UserAPI-0.0.1-SNAPSHOT.jar
 
 - The application should now be running on http://localhost:8080 
@@ -36,17 +34,13 @@
 - Navigate to the extracted directory in the terminal and install the required packages using the following command:
 
     yarn install
-    
-    or 
-    
+    or     
     npm install
 
 - Start the development server using the following command:
 
     yarn start
-    
     or
-    
     npm start
 
 - Open your browser and navigate to http://localhost:3000 to view the running app
