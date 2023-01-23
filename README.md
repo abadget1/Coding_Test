@@ -1,6 +1,6 @@
-##MagMutual Coding Test
+# MagMutual Coding Test
 
-### Prerequisites
+#### Prerequisites
 - Java 11 or higher must be installed on your machine.
 - Maven must be installed on your machine.
 - Must have yarn or npm installed.
