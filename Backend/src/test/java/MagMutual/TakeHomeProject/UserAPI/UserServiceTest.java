@@ -2,6 +2,10 @@ package MagMutual.TakeHomeProject.UserAPI;
 import MagMutual.TakeHomeProject.UserAPI.model.User;
 import MagMutual.TakeHomeProject.UserAPI.services.UserService;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -94,3 +98,4 @@ public class UserServiceTest {
     }
 
 }
+

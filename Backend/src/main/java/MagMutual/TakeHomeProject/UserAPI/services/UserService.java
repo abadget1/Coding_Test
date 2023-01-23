@@ -19,7 +19,7 @@ public class UserService {
 
 
     private final List<User> users = new ArrayList<>();
-    private final String filePath = "src/UserInformation[97].csv";
+    private final String filePath = "Backend/src/main/resources/UserInformation[97].csv";
 
     public UserService() {
         try (Reader reader = new FileReader(filePath)) {
