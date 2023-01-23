@@ -2,16 +2,14 @@ package MagMutual.TakeHomeProject.UserAPI;
 import MagMutual.TakeHomeProject.UserAPI.model.User;
 import MagMutual.TakeHomeProject.UserAPI.services.UserService;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.time.LocalDate;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class UserServiceTest {
 
@@ -36,7 +34,6 @@ public class UserServiceTest {
     @Test
     public void testGetUsersByProfession_invalidProfession() {
         List<User> users = userService.getUsersByProfession("NotValid");
-        assertNotNull(users);
         assertEquals(0, users.size());
     }
 
@@ -58,13 +55,12 @@ public class UserServiceTest {
         LocalDate endDate = LocalDate.of(2020, 12, 31);
         List<User> users = userService.getUsersByDateRange(startDate, endDate);
         assertNotNull(users);
-        assertTrue(users.size() == 0);
+        assertEquals(0, users.size());
     }
 
     @Test
     public void testGetUserByName_validName(){
         User user = userService.getUserByName("Andree", "Flita");
-
         assertNotNull(user);
         assertTrue(user.getFirstName().equalsIgnoreCase("Andree") && user.getLastName().equalsIgnoreCase("Flita"));
     }
@@ -72,21 +68,29 @@ public class UserServiceTest {
     @Test
     public void testGetUserByName_invalidName(){
         User user = userService.getUserByName("NotValid", "NotValid");
-        assertTrue(user == null);
+        assertNull(user);
     }
 
     @Test
-    public void testGetUserByCity_validCity(){
-        List<User> users = userService.getUsersByCity("Atlanta");
-        assertNotNull(users);
+    public void testGetUserById_validId(){
+        User user = userService.getUserById(100L);
+        assertEquals(100L, user.getId());
+    }
+
+    @Test
+    public void testGetUserById_invalidId(){
+        User user = userService.getUserById(1000000000000L);
+        assertNull(user);
+    }
+    @Test
+    public void testGetUserById_nullId() {
+        User user = userService.getUserById(null);
+        assertNull(user);
+    }
+    @Test
+    public void testGetUserAllUsers() {
+        List<User> users = userService.getAllUsers();
         assertTrue(users.size() > 0);
-    }
-
-    @Test
-    public void testGetUserByCity_invalidCity(){
-        List<User> users = userService.getUsersByCity("NotValid");
-        assertNotNull(users);
-        assertTrue(users.size() == 0);
     }
 
 }
