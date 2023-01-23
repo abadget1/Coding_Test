@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: MagMutual.TakeHomeProject.UserAPI.UserControllerTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.475 s - in MagMutual.TakeHomeProject.UserAPI.UserControllerTest
